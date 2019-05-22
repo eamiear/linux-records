@@ -41,6 +41,13 @@ This is a test
 ## 报无权限问题处理
 
 ```bash
+[root@server-test-211 kz]# ./test.sh
+-bash: ./test.sh: Permission denied
+```
+
+赋予权限
+
+```bash
 [root@server-test-211 kz]# chmod u+x test.sh
 
 ```
