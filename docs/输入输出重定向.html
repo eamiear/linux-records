@@ -1,0 +1,645 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>输入输出重定向 · linux records</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="author" content="eamiear">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="shell编程.html" />
+    
+    
+    <link rel="prev" href="创建简单shell脚本.html" />
+    
+
+    
+        <link rel="shortcut icon" href='assets/images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='assets/images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='assets/images/apple-touch-icon.png'>
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">文件系统</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="文件系统目录.html">
+            
+                <a href="文件系统目录.html">
+            
+                    
+                    文件系统目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="浏览文件系统.html">
+            
+                <a href="浏览文件系统.html">
+            
+                    
+                    浏览文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="文件和目录列表.html">
+            
+                <a href="文件和目录列表.html">
+            
+                    
+                    文件和目录列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="文件操作管理.html">
+            
+                <a href="文件操作管理.html">
+            
+                    
+                    文件操作管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="目录管理.html">
+            
+                <a href="目录管理.html">
+            
+                    
+                    目录管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="文件内容查询.html">
+            
+                <a href="文件内容查询.html">
+            
+                    
+                    文件内容查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="数据文件处理.html">
+            
+                <a href="数据文件处理.html">
+            
+                    
+                    数据文件处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">系统监控</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="磁盘管理.html">
+            
+                <a href="磁盘管理.html">
+            
+                    
+                    磁盘管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="进程管理.html">
+            
+                <a href="进程管理.html">
+            
+                    
+                    进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">变量</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="环境变量.html">
+            
+                <a href="环境变量.html">
+            
+                    
+                    环境变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="使用变量.html">
+            
+                <a href="使用变量.html">
+            
+                    
+                    使用变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">权限</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="用户管理.html">
+            
+                <a href="用户管理.html">
+            
+                    
+                    用户管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="文件权限详情.html">
+            
+                <a href="文件权限详情.html">
+            
+                    
+                    文件权限详情
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">包管理</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="包管理工具.html">
+            
+                <a href="包管理工具.html">
+            
+                    
+                    包管理工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">编辑器</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="编辑器.html">
+            
+                <a href="编辑器.html">
+            
+                    
+                    编辑器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">脚本</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="shell命令.html">
+            
+                <a href="shell命令.html">
+            
+                    
+                    shell命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="创建简单shell脚本.html">
+            
+                <a href="创建简单shell脚本.html">
+            
+                    
+                    创建简单shell脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="7.3" data-path="输入输出重定向.html">
+            
+                <a href="输入输出重定向.html">
+            
+                    
+                    输入输出重定向
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="shell编程.html">
+            
+                <a href="shell编程.html">
+            
+                    
+                    shell编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >输入输出重定向</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x91CD;&#x5B9A;&#x5411;">&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x91CD;&#x5B9A;&#x5411;</h1>
+<blockquote>
+<p>&#x5C06;<strong>&#x547D;&#x4EE4;</strong>&#x7684;&#x8F93;&#x51FA;&#x91CD;&#x5B9A;&#x5411;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#xFF08;&#x6587;&#x4EF6;&#xFF09;&#xFF0C;&#x5C06;&#x6587;&#x4EF6;&#x4F5C;&#x4E3A;&#x547D;&#x4EE4;&#x7684;&#x8F93;&#x5165;</p>
+</blockquote>
+<h2 id="&#x8F93;&#x51FA;&#x91CD;&#x5B9A;&#x5411;">&#x8F93;&#x51FA;&#x91CD;&#x5B9A;&#x5411;</h2>
+<h3 id="&#x8986;&#x76D6;&#x6587;&#x4EF6;&#x539F;&#x5185;&#x5BB9;">&#x8986;&#x76D6;&#x6587;&#x4EF6;&#x539F;&#x5185;&#x5BB9;</h3>
+<blockquote>
+<p><code>command &gt; outputfile</code></p>
+</blockquote>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5C06;&#x65E5;&#x671F;&#x8F93;&#x51FA;&#x5230;&#x6587;&#x4EF6;</span>
+[root@server-test-211 kz]<span class="hljs-comment"># date &gt; test.sh</span>
+
+[root@server-test-211 kz]<span class="hljs-comment"># cat test.sh</span>
+Thu May 23 10:43:06 CST 2019
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-comment">#&#x67E5;&#x770B;docker&#x5B89;&#x88C5;&#x8DEF;&#x5F84;&#xFF0C;&#x5E76;&#x8F93;&#x51FA;&#x5230;&#x6587;&#x4EF6;</span>
+[root@server-test-211 kz]<span class="hljs-comment"># whereis docker &gt; test.sh</span>
+[root@server-test-211 kz]<span class="hljs-comment"># cat test.sh</span>
+docker: /usr/bin/docker /etc/docker /usr/libexec/docker /usr/share/man/man1/docker.1.gz
+</code></pre>
+<h3 id="&#x4E0D;&#x8986;&#x76D6;&#x6587;&#x4EF6;&#x539F;&#x5185;&#x5BB9;-&#x8FFD;&#x52A0;">&#x4E0D;&#x8986;&#x76D6;&#x6587;&#x4EF6;&#x539F;&#x5185;&#x5BB9;-&#x8FFD;&#x52A0;</h3>
+<blockquote>
+<p><code>command &gt;&gt; outputfile</code></p>
+</blockquote>
+<pre><code class="lang-bash">[root@server-test-211 kz]<span class="hljs-comment"># date &gt;&gt; test.sh</span>
+[root@server-test-211 kz]<span class="hljs-comment"># cat test.sh</span>
+docker: /usr/bin/docker /etc/docker /usr/libexec/docker /usr/share/man/man1/docker.1.gz
+Thu May 23 10:48:32 CST 2019
+</code></pre>
+<h2 id="&#x8F93;&#x5165;&#x91CD;&#x5B9A;&#x5411;">&#x8F93;&#x5165;&#x91CD;&#x5B9A;&#x5411;</h2>
+<blockquote>
+<p><code>command &lt; inputfile</code></p>
+</blockquote>
+<pre><code class="lang-bash">[root@server-test-211 kz]<span class="hljs-comment"># wc &lt; test.sh</span>
+  2  11 117
+</code></pre>
+<h2 id="&#x7BA1;&#x9053;">&#x7BA1;&#x9053;</h2>
+<blockquote>
+<p>&#x5C06;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x7684;&#x8F93;&#x51FA;&#x4F5C;&#x4E3A;&#x53E6;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x7684;&#x8F93;&#x5165;</p>
+<p><code>command1 | command2</code></p>
+</blockquote>
+<pre><code class="lang-bash"><span class="hljs-comment"># rpm &#x8F93;&#x51FA;&#x5B89;&#x88C5;&#x5305;&#x5217;&#x8868;&#xFF0C;&#x6392;&#x5E8F;&#x5B58;&#x653E;&#x5230;rpm.txt&#x6587;&#x4EF6;</span>
+[root@server-test-211 kz]<span class="hljs-comment"># rpm -qa | sort &gt; rpm.txt</span>
+</code></pre>
+<pre><code class="lang-bash">[root@server-test-211 kz]<span class="hljs-comment"># ll</span>
+total 160
+-rw-r--r--. 1 root root      0 May 15 16:13 admin.html
+-rw-r--r--. 1 root root     48 May 16 11:47 index.html
+-rw-r--r--. 1 root root 104658 May 20 09:54 installed_software.txt
+-rw-r--r--. 1 root root  43492 May 24 13:56 rpm.txt
+drwxr-xr-x. 2 root root     56 May 16 14:00 <span class="hljs-built_in">test</span>
+-rw-r--r--. 1 root root   2212 May 15 17:37 test.html
+-rwxr--r--. 1 skz  root    140 May 23 10:59 test.sh
+drwxr-xr-x. 2 root root     23 May 17 09:30 user
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x67E5;&#x770B;&#x524D;&#x56DB;&#x884C;&#x5185;&#x5BB9;</span>
+[root@server-test-211 kz]<span class="hljs-comment"># head -4 rpm.txt </span>
+abattis-cantarell-fonts-0.0.16-3.el7.noarch
+abrt-2.1.11-45.el7.centos.x86_64
+abrt-addon-ccpp-2.1.11-45.el7.centos.x86_64
+abrt-addon-kerneloops-2.1.11-45.el7.centos.x86_64
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x6392;&#x5E8F;&#x8F93;&#x51FA;&#x524D;6&#x6761;&#x5305;&#x5217;&#x8868;9&#x8BB0;&#x5F55;</span>
+[root@server-test-211 kz]<span class="hljs-comment"># rpm -qa | sort | head -6</span>
+abattis-cantarell-fonts-0.0.16-3.el7.noarch
+abrt-2.1.11-45.el7.centos.x86_64
+abrt-addon-ccpp-2.1.11-45.el7.centos.x86_64
+abrt-addon-kerneloops-2.1.11-45.el7.centos.x86_64
+abrt-addon-pstoreoops-2.1.11-45.el7.centos.x86_64
+abrt-addon-python-2.1.11-45.el7.centos.x86_64
+</code></pre>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; eamiear all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2019-05-24 14:04:40
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="创建简单shell脚本.html" class="navigation navigation-prev " aria-label="Previous page: 创建简单shell脚本">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="shell编程.html" class="navigation navigation-next " aria-label="Next page: shell编程">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"输入输出重定向","level":"7.3","depth":1,"next":{"title":"shell编程","level":"7.4","depth":1,"path":"shell编程.md","ref":"shell编程.md","articles":[]},"previous":{"title":"创建简单shell脚本","level":"7.2","depth":1,"path":"创建简单shell脚本.md","ref":"创建简单shell脚本.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","advanced-emoji","emphasize","include-codeblock","ace","splitter","favicon","expandable-chapters-small","sitemap-general","tbfed-pagefooter"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © eamiear","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"emphasize":{},"ace":{},"splitter":{},"search-pro":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sitemap-general":{"prefix":"https://eamiear.gitbooks.io"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico","appleTouch":"assets/images/apple-touch-icon.png"},"expandable-chapters-small":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"monokai","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"eamiear","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"linux records","language":"zh-hans","output.name":"linux-records","gitbook":"3.2.2","description":"Linux记录册","theme-default":{"showLevel":true}},"file":{"path":"输入输出重定向.md","mtime":"2019-05-24T06:04:40.061Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-05-24T07:30:07.835Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
