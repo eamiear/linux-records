@@ -20,22 +20,13 @@
         "favicon",
         "expandable-chapters-small",
         "sitemap-general",
-        "tbfed-pagefooter",
-        "anchor-navigation-ex"
-        
+        "tbfed-pagefooter"
     ],
     "pluginsConfig": {
         "tbfed-pagefooter": {
             "copyright":"Copyright © eamiear",
             "modify_label": "该文件修订时间：",
             "modify_format": "YYYY-MM-DD HH:mm:ss"
-        },
-        "anchor-navigation-ex": {
-            "isRewritePageTitle": false,
-            "isShowTocTitleIcon": true,
-            "tocLevel1Icon": "fa fa-hand-o-right",
-            "tocLevel2Icon": "fa fa-hand-o-right",
-            "tocLevel3Icon": "fa fa-hand-o-right"
         },
         "sitemap-general": {
             "prefix": "https://eamiear.gitbooks.io"
