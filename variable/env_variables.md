@@ -2,10 +2,10 @@
 
 ## 系统默认环境变量
 
-![环境变量](snapshot/env.variable.png)
-![环境变量](snapshot/env.variable1.png)
-![环境变量](snapshot/env.variable2.png)
-![环境变量](snapshot/env.variable3.png)
+![环境变量](../snapshot/env.variable.png)
+![环境变量](../snapshot/env.variable1.png)
+![环境变量](../snapshot/env.variable2.png)
+![环境变量](../snapshot/env.variable3.png)
 
 ## 全局变量
 

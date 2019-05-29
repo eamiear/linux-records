@@ -41,7 +41,7 @@ drwxr-xr-x. 2 root root     23 May 17 09:30 user
 
 ### 八进制模式
 
-![文件权限码](snapshot/auth-code-list.png)
+![文件权限码](../snapshot/auth-code-list.png)
 
 ```bash
 [root@server-test-211 kz]# chmod 760  shell.sh 
