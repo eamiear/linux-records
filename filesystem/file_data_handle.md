@@ -43,6 +43,7 @@ one
 ```
 
 ```bash
+# 默认排序
 [root@server-test-211 kz]# sort index.html
 
 11
@@ -59,6 +60,7 @@ one
 ```
 
 ```bash
+# 按数值排序
 [root@server-test-211 kz]# sort -n  index.html
 
 a index file
@@ -170,6 +172,7 @@ drwxr-xr-x. 2 root root   65 May 16 13:58 test
 > `tar function [option] object1 object2 ...`
 
 `function`
+
 | 选项 | 用途 |
 |:-------|:-----|
 |-A --concatenate |将一个已有tar归档文件追加到另一个已有tar归档文件|
@@ -182,6 +185,7 @@ drwxr-xr-x. 2 root root   65 May 16 13:58 test
 |-x --extract |从已有tar归档文件中提取文件|
 
 `option`
+
 | 选项 | 用途 |
 |:-------|:-----|
 |-C dir |切换到指定目录|
