@@ -44,6 +44,7 @@ tmpfs                772M     0  772M   0% /run/user/0
 | -s | 显示每个输出参数的总计|
 
 ```bash
+# 显示磁盘状态
 [root@server-test-211 kz]# du
 12	./test
 20	.
@@ -51,6 +52,7 @@ tmpfs                772M     0  772M   0% /run/user/0
 ```
 
 ```bash
+# 显示当前目录耗存大小
 [root@server-test-211 kz]# du -c
 12	./test
 20	.
@@ -58,6 +60,7 @@ tmpfs                772M     0  772M   0% /run/user/0
 ```
 
 ```bash
+# 易读格式显示
 [root@server-test-211 kz]# du -h
 12K	./test
 20K	.
