@@ -168,6 +168,21 @@ fi
 It is valid condition
 ```
 
+示例2：
+
+```bash
+
+[root@server-test-211 kz]# cat test.sh
+#!/bin/bash
+
+isValid="yes"
+
+if [ $isValid ]
+then
+   echo "It is valid condition"
+fi
+```
+
 ### test 支持的条件判断类型
 
 * [数值比较](condition_number_compare.md)
